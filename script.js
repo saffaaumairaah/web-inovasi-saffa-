@@ -1,14 +1,11 @@
-let eventDate = new Date("August 25, 2026 00:00:00").getTime();
+let eventDate = new Date("June 30, 2026 00:00:00").getTime();
 
 let timer = setInterval(function() {
     let now = new Date().getTime();
     let distance = eventDate - now;
 
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
 
-document.getElementById("timer").innerHTML =
-days + " hari " + hours + " jam lagi"; 
     document.getElementById("timer").innerHTML = days + " hari lagi";
 
 }, 1000);
